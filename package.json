@@ -1,0 +1,38 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "an app which uses the TFL API to get some data with the purpose of practicing using hapi and making api calls",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bo-bok/tflapi.git"
+  },
+  "author": "Jessica Salmon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bo-bok/tflapi/issues"
+  },
+  "homepage": "https://github.com/bo-bok/tflapi#readme",
+  "dependencies": {
+    "env2": "^2.1.1",
+    "handlebars": "^4.0.6",
+    "hapi": "^16.1.1",
+    "inert": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "node": "0.0.0",
+    "nodemon": "^1.11.0",
+  },
+  "devDependencies":{
+    "shot": "^3.4.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
+}
