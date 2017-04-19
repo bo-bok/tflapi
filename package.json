@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "",
+    "test": "node tests/src/server/tests.js | tap-spec",
     "start": "node server.js",
     "devStart": "nodemon server.js"
   },
@@ -28,7 +28,7 @@
     "inert": "^4.2.0",
     "istanbul": "^0.4.5",
     "node": "0.0.0",
-    "nodemon": "^1.11.0",
+    "nodemon": "^1.11.0"
   },
   "devDependencies":{
     "shot": "^3.4.0",
