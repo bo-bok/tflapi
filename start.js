@@ -1,10 +1,4 @@
-var Hapi = require('hapi');
-var server = new Hapi.Server;
-
-server.connection({
-  host: 'localhost',
-  port: '4000'
-});
+var server = require('./src/server.js')
 
 server.start( (err) => {
   if (err) {
