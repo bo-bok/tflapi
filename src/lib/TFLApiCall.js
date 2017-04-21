@@ -6,20 +6,19 @@ const TFLCall = (callback) => {
       return callback(err, null)
     }
     else {
-      var parsedObj = JSON.parse(body);
-
+      // var parsedObj = JSON.parse(body);
       // for only bakerloo line info
       // var bakerlooLineInfo = parsedObj.filter(function(tubeLines) {
       //   return tubeLines.name == 'Bakerloo';
       // })
       //
-      var tubeLineStatus = parsedObj.map(function(tubeLines){
-        var newObj = {};
-        newObj['name'] = tubeLines.name;
-        newObj['status'] = tubeLines.lineStatuses[0].statusSeverityDescription;
-        return newObj;
-      })
-      console.log(tubeLineStatus);
+      // var tubeLineStatus = parsedObj.map(function(tubeLines){
+      //   var newObj = {};
+      //   newObj['name'] = tubeLines.name;
+      //   newObj['status'] = tubeLines.lineStatuses[0].statusSeverityDescription;
+      //   return newObj;
+      // })
+      // console.log(tubeLineStatus);
       return callback(null, body)
     }
   })

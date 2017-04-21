@@ -7,7 +7,7 @@ var nockJSON = require('../../nock.json');
 test('check if TFL call returns the correct data', (t) => {
   var TFL = nock('https://api.tfl.gov.uk')
     .get('/line/mode/tube/status')
-    .reply(200, [ { name: 'Bakerloo', status: 'Good Service' } ])
+    .reply(200, nockJSON.OK)
 
   TFLCall(function (err, res) {
     var expected = JSON.stringify(nockJSON.OK);
