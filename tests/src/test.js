@@ -1,7 +1,9 @@
 var test = require('tape');
-var Shot = require('shot');
+// var Hapi = require('hapi');
+// var Shot = require('shot');
 
-var server = require('server');
+var server = require('../../src/server.js');
+// var router = require('../../src/routes/index.js')
 
 // backend
 test('test that tape is working with an initial passing test', (t) => {
@@ -16,10 +18,24 @@ test('Initialize server test', (t) => {
   t.end();
 })
 
-test('test that server starts', (t) => {
-  let expected =
-  t.equal(, server.start(),'should return "'server is running on port', server.info.uri"');
+
+test('home route returns a status code of 200', (t) => {
+  var options = {
+    method: 'GET',
+    url: '/'
+  };
+
+  server.inject( options, (res) => {
+  t.equal(res.statusCode, 200, 'should respond with a status code of 200');
   t.end();
+  })
 })
 
-Shot.inject({}, )
+// does not throw an error method
+// compare the hapi server object with my instance of the hapi server object
+
+// test('test that server starts', (t) => {
+//   let expected =
+//   t.equal(, server.start(),'should return "'server is running on port', server.info.uri"');
+//   t.end();
+// })
